@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package mmm.nnn;
+
+option java_package="com.skemaloop.test";
+
+
+service Ooo {
+    rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+
+message HelloRequest {
+    string msg = 1;
+}
+message HelloReply {
+    string msg = 1;
+    string code = 2;
+}
