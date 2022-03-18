@@ -12,6 +12,7 @@ service Ooo {
 
 message HelloRequest {
     string msg = 1;
+    string msg2 = 2;
 }
 message HelloReply {
     string msg = 1;
