@@ -29,6 +29,18 @@ public final class OooOuterClass {
      */
     com.google.protobuf.ByteString
         getMsgBytes();
+
+    /**
+     * <code>string msg2 = 2;</code>
+     * @return The msg2.
+     */
+    java.lang.String getMsg2();
+    /**
+     * <code>string msg2 = 2;</code>
+     * @return The bytes for msg2.
+     */
+    com.google.protobuf.ByteString
+        getMsg2Bytes();
   }
   /**
    * Protobuf type {@code mmm.nnn.HelloRequest}
@@ -44,6 +56,7 @@ public final class OooOuterClass {
     }
     private HelloRequest() {
       msg_ = "";
+      msg2_ = "";
     }
 
     @java.lang.Override
@@ -80,6 +93,12 @@ public final class OooOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               msg_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              msg2_ = s;
               break;
             }
             default: {
@@ -152,6 +171,44 @@ public final class OooOuterClass {
       }
     }
 
+    public static final int MSG2_FIELD_NUMBER = 2;
+    private volatile java.lang.Object msg2_;
+    /**
+     * <code>string msg2 = 2;</code>
+     * @return The msg2.
+     */
+    @java.lang.Override
+    public java.lang.String getMsg2() {
+      java.lang.Object ref = msg2_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        msg2_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string msg2 = 2;</code>
+     * @return The bytes for msg2.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMsg2Bytes() {
+      java.lang.Object ref = msg2_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        msg2_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -169,6 +226,9 @@ public final class OooOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msg_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, msg_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msg2_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, msg2_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -180,6 +240,9 @@ public final class OooOuterClass {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msg_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, msg_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msg2_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, msg2_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -198,6 +261,8 @@ public final class OooOuterClass {
 
       if (!getMsg()
           .equals(other.getMsg())) return false;
+      if (!getMsg2()
+          .equals(other.getMsg2())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -211,6 +276,8 @@ public final class OooOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_FIELD_NUMBER;
       hash = (53 * hash) + getMsg().hashCode();
+      hash = (37 * hash) + MSG2_FIELD_NUMBER;
+      hash = (53 * hash) + getMsg2().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -346,6 +413,8 @@ public final class OooOuterClass {
         super.clear();
         msg_ = "";
 
+        msg2_ = "";
+
         return this;
       }
 
@@ -373,6 +442,7 @@ public final class OooOuterClass {
       public com.skemaloop.test.OooOuterClass.HelloRequest buildPartial() {
         com.skemaloop.test.OooOuterClass.HelloRequest result = new com.skemaloop.test.OooOuterClass.HelloRequest(this);
         result.msg_ = msg_;
+        result.msg2_ = msg2_;
         onBuilt();
         return result;
       }
@@ -423,6 +493,10 @@ public final class OooOuterClass {
         if (other == com.skemaloop.test.OooOuterClass.HelloRequest.getDefaultInstance()) return this;
         if (!other.getMsg().isEmpty()) {
           msg_ = other.msg_;
+          onChanged();
+        }
+        if (!other.getMsg2().isEmpty()) {
+          msg2_ = other.msg2_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -526,6 +600,82 @@ public final class OooOuterClass {
   checkByteStringIsUtf8(value);
         
         msg_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object msg2_ = "";
+      /**
+       * <code>string msg2 = 2;</code>
+       * @return The msg2.
+       */
+      public java.lang.String getMsg2() {
+        java.lang.Object ref = msg2_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          msg2_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string msg2 = 2;</code>
+       * @return The bytes for msg2.
+       */
+      public com.google.protobuf.ByteString
+          getMsg2Bytes() {
+        java.lang.Object ref = msg2_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          msg2_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string msg2 = 2;</code>
+       * @param value The msg2 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMsg2(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        msg2_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string msg2 = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMsg2() {
+        
+        msg2_ = getDefaultInstance().getMsg2();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string msg2 = 2;</code>
+       * @param value The bytes for msg2 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMsg2Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        msg2_ = value;
         onChanged();
         return this;
       }
@@ -1319,11 +1469,11 @@ public final class OooOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\tOoo.proto\022\007mmm.nnn\"\033\n\014HelloRequest\022\013\n\003" +
-      "msg\030\001 \001(\t\"\'\n\nHelloReply\022\013\n\003msg\030\001 \001(\t\022\014\n\004" +
-      "code\030\002 \001(\t2=\n\003Ooo\0226\n\010SayHello\022\025.mmm.nnn." +
-      "HelloRequest\032\023.mmm.nnn.HelloReplyB\024\n\022com" +
-      ".skemaloop.testb\006proto3"
+      "\n\tOoo.proto\022\007mmm.nnn\")\n\014HelloRequest\022\013\n\003" +
+      "msg\030\001 \001(\t\022\014\n\004msg2\030\002 \001(\t\"\'\n\nHelloReply\022\013\n" +
+      "\003msg\030\001 \001(\t\022\014\n\004code\030\002 \001(\t2=\n\003Ooo\0226\n\010SayHe" +
+      "llo\022\025.mmm.nnn.HelloRequest\032\023.mmm.nnn.Hel" +
+      "loReplyB\024\n\022com.skemaloop.testb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1334,7 +1484,7 @@ public final class OooOuterClass {
     internal_static_mmm_nnn_HelloRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mmm_nnn_HelloRequest_descriptor,
-        new java.lang.String[] { "Msg", });
+        new java.lang.String[] { "Msg", "Msg2", });
     internal_static_mmm_nnn_HelloReply_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_mmm_nnn_HelloReply_fieldAccessorTable = new
